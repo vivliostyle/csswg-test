@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>CSS Test Reference: Positioning in paged media: Initial containing block</title>
+<link rel="author" title="Vivliostyle" href="http://vivliostyle.com">
+<link rel="stylesheet" type="text/css" href="support/vivliostyle-user-agent.css">
+<style type="text/css">
+    h1 { position: absolute; top: 2em; left: 1em; font: 6em monospace; }
+</style>
+<body>
+<div id="page">
+    <div id="body">
+  <p>Display this in a paged media. The word PASS should display below
+  (followed by three mostly-blank pages).</p>
+    </div>
+    <div><h1>P</h1></div>
+    <div><h1>&nbsp;A</h1></div>
+    <div><h1>&nbsp;&nbsp;S</h1></div>
+    <div><h1>&nbsp;&nbsp;&nbsp;S</h1></div>
+</div>
+</body>

@@ -1,0 +1,146 @@
+{
+  "items": {
+    "manual": [
+      {
+        "path": "css21/page-box/page-container-003.xht",
+        "url": "/css21/page-box/page-container-003.xht"
+      },
+      {
+        "path": "css21/page-box/page-container-004.xht",
+        "url": "/css21/page-box/page-container-004.xht"
+      },
+      {
+        "path": "css21/page-box/page-container-005.xht",
+        "url": "/css21/page-box/page-container-005.xht"
+      },
+      {
+        "path": "css21/page-box/page-grammar-001.xht",
+        "url": "/css21/page-box/page-grammar-001.xht"
+      },
+      {
+        "path": "css21/page-box/page-grammar-002.xht",
+        "url": "/css21/page-box/page-grammar-002.xht"
+      },
+      {
+        "path": "css21/page-box/page-props-101.xht",
+        "url": "/css21/page-box/page-props-101.xht"
+      },
+      {
+        "path": "css21/page-box/page-props-102.xht",
+        "url": "/css21/page-box/page-props-102.xht"
+      },
+      {
+        "path": "css21/page-box/page-selectors-003.xht",
+        "url": "/css21/page-box/page-selectors-003.xht"
+      }
+    ],
+    "reftest": [
+      {
+        "path": "css21/positioning/abspos-paged-001.xht",
+        "references": [
+          [
+            "/css21/positioning/vivliostyle/abspos-paged-001-ref.html", "=="
+          ]
+        ],
+        "url": "/css21/positioning/abspos-paged-001.xht"
+      },
+      {
+        "path": "css21/page-box/at-page-rule-001.xht",
+        "references": [],
+        "url": "/css21/page-box/at-page-rule-001.xht"
+      },
+      {
+        "path": "css21/page-box/page-container-000.xht",
+        "references": [],
+        "url": "/css21/page-box/page-container-000.xht"
+      },
+      {
+        "path": "css21/page-box/page-container-001.xht",
+        "references": [],
+        "url": "/css21/page-box/page-container-001.xht"
+      },
+      {
+        "path": "css21/page-box/at-page-rule-002-a.xht",
+        "references": [
+          ["/css21/page-box/vivliostyle/at-page-rule-002-a-ref.html", "=="]
+        ],
+        "url": "/css21/page-box/at-page-rule-002-a.xht"
+      },
+      {
+        "path": "css21/page-box/at-page-rule-002-b.xht",
+        "references": [
+          ["/css21/page-box/vivliostyle/at-page-rule-002-b-ref.html", "=="]
+        ],
+        "url": "/css21/page-box/at-page-rule-002-b.xht"
+      },
+      {
+        "path": "css21/page-box/at-page-rule-002-c.xht",
+        "references": [
+          ["/css21/page-box/vivliostyle/at-page-rule-002-c-ref.html", "=="]
+        ],
+        "url": "/css21/page-box/at-page-rule-002-c.xht"
+      },
+      {
+        "path": "css21/page-box/page-margin-000.xht",
+        "references": [
+          ["/css21/page-box/vivliostyle/page-margin-000-ref.html", "=="]
+        ],
+        "url": "/css21/page-box/page-margin-000.xht"
+      },
+      {
+        "path": "css21/page-box/page-margin-001.xht",
+        "references": [
+          ["/css21/page-box/vivliostyle/page-margin-001-ref.html", "=="]
+        ],
+        "url": "/css21/page-box/page-margin-001.xht"
+      },
+      {
+        "path": "css21/page-box/page-margin-002.xht",
+        "references": [
+          ["/css21/page-box/vivliostyle/page-margin-002-ref.html", "=="]
+        ],
+        "url": "/css21/page-box/page-margin-002.xht"
+      },
+      {
+        "path": "css21/page-box/first-page-selectors-001.xht",
+        "references": [
+          ["/css21/page-box/vivliostyle/first-page-selectors-ltr-ref.html", "=="]
+        ],
+        "url": "/css21/page-box/first-page-selectors-001.xht"
+      },
+      {
+        "path": "css21/page-box/first-page-selectors-002.xht",
+        "references": [
+          ["/css21/page-box/vivliostyle/first-page-selectors-rtl-ref.html", "=="]
+        ],
+        "url": "/css21/page-box/first-page-selectors-002.xht"
+      },
+      {
+        "path": "css21/page-box/first-page-selectors-003.xht",
+        "references": [
+          ["/css21/page-box/vivliostyle/first-page-selectors-ltr-ref.html", "=="]
+        ],
+        "url": "/css21/page-box/first-page-selectors-003.xht"
+      },
+      {
+        "path": "css21/page-box/first-page-selectors-004.xht",
+        "references": [
+          ["/css21/page-box/vivliostyle/first-page-selectors-rtl-ref.html", "=="]
+        ],
+        "url": "/css21/page-box/first-page-selectors-004.xht"
+      }
+    ],
+    "stub": [],
+    "testharness": [],
+    "wdspec": []
+  },
+  "local_changes": {
+    "deleted": [],
+    "items": {},
+    "reftest_nodes": {}
+  },
+  "reftest_nodes": {},
+  "rev": null,
+  "url_base": "/",
+  "version": 2
+}

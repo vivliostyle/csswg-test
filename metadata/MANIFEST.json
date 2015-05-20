@@ -2,6 +2,30 @@
   "items": {
     "manual": [
       {
+        "path": "css21/positioning/abspos-paged-002.xht",
+        "url": "/css21/positioning/abspos-paged-002.xht"
+      },
+      {
+        "path": "css21/page-box/page-selectors-001.xht",
+        "url": "/css21/page-box/page-selectors-001.xht"
+      },
+      {
+        "path": "css21/page-box/page-selectors-002.xht",
+        "url": "/css21/page-box/page-selectors-002.xht"
+      },
+      {
+        "path": "css21/page-box/page-props-100-a.xht",
+        "url": "/css21/page-box/page-props-100-a.xht"
+      },
+      {
+        "path": "css21/page-box/page-props-100-b.xht",
+        "url": "/css21/page-box/page-props-100-b.xht"
+      },
+      {
+        "path": "css21/page-box/page-props-103.xht",
+        "url": "/css21/page-box/page-props-103.xht"
+      },
+      {
         "path": "css-page-3/page-size-000.xht",
         "url": "/css-page-3/page-size-000.xht"
       },
@@ -44,11 +68,44 @@
     ],
     "reftest": [
       {
+        "path": "css21/page-box/page-container-002.xht",
+        "references": [
+          ["css21/page-box/vivliostyle/page-container-002-ref.html", "=="]
+        ],
+        "url": "/css21/page-box/page-container-002.xht"
+      },
+      {
+        "path": "css21/page-box/page-container-006.xht",
+        "references": [
+          ["css21/page-box/vivliostyle/page-container-006-ref.html", "=="]
+        ],
+        "url": "/css21/page-box/page-container-006.xht"
+      },
+      {
+        "path": "css21/page-box/page-container-010.xht",
+        "references": [
+          ["css21/page-box/vivliostyle/page-container-010-ref.html", "=="]
+        ],
+        "url": "/css21/page-box/page-container-010.xht"
+      },
+      {
+        "path": "css21/page-box/page-selectors-004.xht",
+        "references": [
+          ["css21/page-box/vivliostyle/page-selectors-004-ref.html", "=="]
+        ],
+        "url": "/css21/page-box/page-selectors-004.xht"
+      },
+      {
+        "path": "css21/page-box/page-selectors-006.xht",
+        "references": [
+          ["css21/page-box/vivliostyle/page-selectors-006-ref.html", "=="]
+        ],
+        "url": "/css21/page-box/page-selectors-006.xht"
+      },
+      {
         "path": "css-page-3/page-size-010.xht",
         "references": [
-          [
-            "/css-page-3/vivliostyle/page-size-010-ref.html", "=="
-          ]
+          ["/css-page-3/vivliostyle/page-size-010-ref.html", "=="]
         ],
         "url": "/css-page-3/page-size-010.xht"
       }
