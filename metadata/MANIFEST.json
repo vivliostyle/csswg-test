@@ -1,7 +1,58 @@
 {
   "items": {
-    "manual": [],
-    "reftest": [],
+    "manual": [
+      {
+        "path": "css-page-3/page-size-000.xht",
+        "url": "/css-page-3/page-size-000.xht"
+      },
+      {
+        "path": "css-page-3/page-size-001.xht",
+        "url": "/css-page-3/page-size-001.xht"
+      },
+      {
+        "path": "css-page-3/page-size-002.xht",
+        "url": "/css-page-3/page-size-002.xht"
+      },
+      {
+        "path": "css-page-3/page-size-003.xht",
+        "url": "/css-page-3/page-size-003.xht"
+      },
+      {
+        "path": "css-page-3/page-size-004.xht",
+        "url": "/css-page-3/page-size-004.xht"
+      },
+      {
+        "path": "css-page-3/page-size-005.xht",
+        "url": "/css-page-3/page-size-005.xht"
+      },
+      {
+        "path": "css-page-3/page-size-006.xht",
+        "url": "/css-page-3/page-size-006.xht"
+      },
+      {
+        "path": "css-page-3/page-size-007.xht",
+        "url": "/css-page-3/page-size-007.xht"
+      },
+      {
+        "path": "css-page-3/page-size-008.xht",
+        "url": "/css-page-3/page-size-008.xht"
+      },
+      {
+        "path": "css-page-3/page-size-009.xht",
+        "url": "/css-page-3/page-size-009.xht"
+      }
+    ],
+    "reftest": [
+      {
+        "path": "css-page-3/page-size-010.xht",
+        "references": [
+          [
+            "/css-page-3/vivliostyle/page-size-010-ref.html", "=="
+          ]
+        ],
+        "url": "/css-page-3/page-size-010.xht"
+      }
+    ],
     "stub": [],
     "testharness": [],
     "wdspec": []
