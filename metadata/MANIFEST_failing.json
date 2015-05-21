@@ -42,8 +42,100 @@
         "url": "/css21/page-box/page-selectors-003.xht"
       },
       {
+        "path": "css21/pagination/allowed-page-breaks-001b.xht",
+        "url": "/css21/pagination/allowed-page-breaks-001b.xht"
+      },
+      {
+        "path": "css21/pagination/allowed-page-breaks-001c.xht",
+        "url": "/css21/pagination/allowed-page-breaks-001c.xht"
+      },
+      {
+        "path": "css21/pagination/allowed-page-breaks-004.xht",
+        "url": "/css21/pagination/allowed-page-breaks-004.xht"
+      },
+      {
+        "path": "css21/pagination/allowed-page-breaks-007a.xht",
+        "url": "/css21/pagination/allowed-page-breaks-007a.xht"
+      },
+      {
+        "path": "css21/pagination/allowed-page-breaks-007b.xht",
+        "url": "/css21/pagination/allowed-page-breaks-007b.xht"
+      },
+      {
+        "path": "css21/pagination/forced-page-breaks-000.xht",
+        "url": "/css21/pagination/forced-page-breaks-000.xht"
+      },
+      {
+        "path": "css21/pagination/forced-page-breaks-001.xht",
+        "url": "/css21/pagination/forced-page-breaks-001.xht"
+      },
+      {
+        "path": "css21/pagination/orphans-001.xht",
+        "url": "/css21/pagination/orphans-001.xht"
+      },
+      {
+        "path": "css21/pagination/page-break-after-008.xht",
+        "url": "/css21/pagination/page-break-after-008.xht"
+      },
+      {
+        "path": "css21/pagination/page-break-after-010.xht",
+        "url": "/css21/pagination/page-break-after-010.xht"
+      },
+      {
+        "path": "css21/pagination/page-break-before-003.xht",
+        "url": "/css21/pagination/page-break-before-003.xht"
+      },
+      {
+        "path": "css21/pagination/page-break-before-005.xht",
+        "url": "/css21/pagination/page-break-before-005.xht"
+      },
+      {
+        "path": "css21/pagination/page-break-before-007.xht",
+        "url": "/css21/pagination/page-break-before-007.xht"
+      },
+      {
+        "path": "css21/pagination/page-break-before-009.xht",
+        "url": "/css21/pagination/page-break-before-009.xht"
+      },
+      {
+        "path": "css21/pagination/page-break-before-020.xht",
+        "url": "/css21/pagination/page-break-before-020.xht"
+      },
+      {
+        "path": "css21/pagination/page-break-inside-002.xht",
+        "url": "/css21/pagination/page-break-inside-002.xht"
+      },
+      {
+        "path": "css21/pagination/page-break-margins-002.xht",
+        "url": "/css21/pagination/page-break-margins-002.xht"
+      },
+      {
+        "path": "css21/pagination/page-break-margins-003.xht",
+        "url": "/css21/pagination/page-break-margins-003.xht"
+      },
+      {
+        "path": "css21/pagination/page-break-margins-004.xht",
+        "url": "/css21/pagination/page-break-margins-004.xht"
+      },
+      {
+        "path": "css21/pagination/page-breaks-101.xht",
+        "url": "/css21/pagination/page-breaks-101.xht"
+      },
+      {
+        "path": "css21/pagination/widows-001.xht",
+        "url": "/css21/pagination/widows-001.xht"
+      },
+      {
+        "path": "css21/pagination/widows-004a.xht",
+        "url": "/css21/pagination/widows-004a.xht"
+      },
+      {
         "path": "css-page-3/forced-page-breaks-002.xht",
         "url": "/css-page-3/forced-page-breaks-002.xht"
+      },
+      {
+        "path": "css-writing-modes-3/page-flow-direction-002.xht",
+        "url": "/css-writing-modes-3/page-flow-direction-002.xht"
       }
     ],
     "reftest": [
