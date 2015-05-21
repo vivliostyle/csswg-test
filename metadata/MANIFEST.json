@@ -2,16 +2,8 @@
   "items": {
     "manual": [
       {
-        "path": "css21/positioning/abspos-paged-002.xht",
-        "url": "/css21/positioning/abspos-paged-002.xht"
-      },
-      {
-        "path": "css21/page-box/page-selectors-001.xht",
-        "url": "/css21/page-box/page-selectors-001.xht"
-      },
-      {
-        "path": "css21/page-box/page-selectors-002.xht",
-        "url": "/css21/page-box/page-selectors-002.xht"
+        "path": "css21/page-box/page-container-011.xht",
+        "url": "/css21/page-box/page-container-011.xht"
       },
       {
         "path": "css21/page-box/page-props-100-a.xht",
@@ -24,6 +16,18 @@
       {
         "path": "css21/page-box/page-props-103.xht",
         "url": "/css21/page-box/page-props-103.xht"
+      },
+      {
+        "path": "css21/page-box/page-selectors-001.xht",
+        "url": "/css21/page-box/page-selectors-001.xht"
+      },
+      {
+        "path": "css21/page-box/page-selectors-002.xht",
+        "url": "/css21/page-box/page-selectors-002.xht"
+      },
+      {
+        "path": "css21/positioning/abspos-paged-002.xht",
+        "url": "/css21/positioning/abspos-paged-002.xht"
       },
       {
         "path": "css-page-3/page-size-000.xht",
@@ -67,6 +71,13 @@
       }
     ],
     "reftest": [
+      {
+        "path": "css21/page-box/first-page-selectors-001.xht",
+        "references": [
+          ["/css21/page-box/vivliostyle/first-page-selectors-ltr-ref.html", "=="]
+        ],
+        "url": "/css21/page-box/first-page-selectors-001.xht"
+      },
       {
         "path": "css21/page-box/page-container-002.xht",
         "references": [
