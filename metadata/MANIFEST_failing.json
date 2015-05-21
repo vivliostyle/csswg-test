@@ -40,6 +40,10 @@
       {
         "path": "css21/page-box/page-selectors-003.xht",
         "url": "/css21/page-box/page-selectors-003.xht"
+      },
+      {
+        "path": "css-page-3/forced-page-breaks-002.xht",
+        "url": "/css-page-3/forced-page-breaks-002.xht"
       }
     ],
     "reftest": [
@@ -143,6 +147,24 @@
           ]
         ],
         "url": "/css21/positioning/abspos-paged-001.xht"
+      },
+      {
+        "path": "css-page-3/page-background-000.xht",
+        "references": [
+          [
+            "/css-page-3/vivliostyle/page-background-000-ref.html", "=="
+          ]
+        ],
+        "url": "/css-page-3/page-background-000.xht"
+      },
+      {
+        "path": "css-page-3/page-margin-003.xht",
+        "references": [
+          [
+            "/css-page-3/vivliostyle/page-margin-003-ref.html", "=="
+          ]
+        ],
+        "url": "/css-page-3/page-margin-003.xht"
       }
     ],
     "stub": [],
