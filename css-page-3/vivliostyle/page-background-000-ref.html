@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>CSS Test Reference: Page Box Background Coverage</title>
+<link rel="author" title="Vivliostyle" href="http://vivliostyle.com">
+<link rel="stylesheet" type="text/css" href="support/vivliostyle-user-agent.css">
+<style type="text/css">
+    html {
+        background-color:#ccffcc;
+    }
+    div#page {
+        top: 25%;
+        left: 25%;
+        border: 2pt solid;
+        width: calc(50% - 4pt);
+        height: calc(50% - 4pt);
+    }
+</style>
+<body>
+<div id="page"><div id="body">
+    <div>This page must be covered by a pale green background. The background either completely covers the page, or leaves only a small strip of white where the printer can't reach.</div>
+</div></div>
+</body>
