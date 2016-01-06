@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
 <title>CSS Test: GCPM string-set with multiple assignments</title>
 <link rel="author" title="Dave Cramer" href="mailto:dauwhe@gmail.com">
 <link rel="help" href="http://www.w3.org/TR/css-gcpm-3/#setting-named-strings-the-string-set-pro">
@@ -9,20 +10,20 @@
 <style>
   @page {
    @top-center {
-   content: string(center); 
+   content: string(center);
    }
    @top-left {
-   content: string(left); 
+   content: string(left);
    }
-   @top-right {content: 
-   string(right); 
+   @top-right {content:
+   string(right);
    }
   }
- 
+
  h1 {
-   string-set: left content(), right content(), center content(first-letter); 
+   string-set: left content(), right content(), center content(first-letter);
  }
- 
+
 </style>
 </head>
 <body>

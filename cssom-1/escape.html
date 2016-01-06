@@ -1,7 +1,7 @@
 <!doctype html>
 <meta charset=utf-8>
 <title>CSS#escape</title>
-<link rel=help href=http://dev.w3.org/csswg/cssom-1/#the-css.escape()-method>
+<link rel=help href=https://drafts.csswg.org/cssom-1/#the-css.escape()-method>
 <script src=/resources/testharness.js></script>
 <script src=/resources/testharnessreport.js></script>
 <div id=log></div>
@@ -19,11 +19,18 @@ test(function() {
 }, "String conversion");
 
 test(function() {
-  assert_throws('InvalidCharacterError', function() { CSS.escape('\0'); });
-  assert_throws('InvalidCharacterError', function() { CSS.escape('a\0'); });
-  assert_throws('InvalidCharacterError', function() { CSS.escape('\0b'); });
-  assert_throws('InvalidCharacterError', function() { CSS.escape('a\0b'); });
+  assert_equals(CSS.escape('\0'), '\uFFFD');
+  assert_equals(CSS.escape('a\0'), 'a\uFFFD');
+  assert_equals(CSS.escape('\0b'), '\uFFFDb');
+  assert_equals(CSS.escape('a\0b'), 'a\uFFFDb');
 }, "Null bytes");
+
+test(function() {
+  assert_equals(CSS.escape('\uFFFD'), '\uFFFD');
+  assert_equals(CSS.escape('a\uFFFD'), 'a\uFFFD');
+  assert_equals(CSS.escape('\uFFFDb'), '\uFFFDb');
+  assert_equals(CSS.escape('a\uFFFDb'), 'a\uFFFDb');
+}, "Replacement character");
 
 test(function() {
   assert_equals(CSS.escape('0a'), '\\30 a');

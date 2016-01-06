@@ -4,7 +4,7 @@
 		<title>CSS Test: calling requestFullscreen() on image element inside a named flow</title>
 		<link rel="author" title="Mihai Balan" href="mailto:mibalan@adobe.com">
 		<link rel="help" href="http://www.w3.org/TR/css3-regions/#the-flow-into-property" />
-		<link rel="help" href="http://www.w3.org/TR/css3-regions/#the-flow-from-property" />
+		<link rel="help" href="http://www.w3.org/TR/css3-regions/#flow-from" />
 		<link rel="help" href="http://www.w3.org/TR/fullscreen/#api" />
 		<meta name="flags" content="dom interact">
 		<meta name="assert" content="This test checks that calling the requestFullscreen() method
@@ -45,7 +45,7 @@
 			</ol>
 			<button>Go full screen</button>
 		</section>
-		
+
 		<div id="content">
 			<img src="support/cat.jpg" alt="A picture of a cat" width="320" height="240">
 		</div>
@@ -53,7 +53,7 @@
 			<p>&nbsp;</p>
 		</div>
 		<div id="fail-marker"></div>
-		
+
 		<script>
 		makeFullScreenToggle("button", "img");
 		</script>

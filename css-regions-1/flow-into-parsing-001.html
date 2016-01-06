@@ -4,24 +4,24 @@
         <title>CSS Regions Parsing Test: Parse flow-into property</title>
         <link rel="author" title="Jacob Goldstein" href="mailto:jacobg@adobe.com">
     <link rel="author" title="Mihai Balan" href="mailto:mibalan@adobe.com"/>
-        <link rel="help" href="http://www.w3.org/TR/css3-regions/#flow-into"/>
+        <link rel="help" href="http://www.w3.org/TR/css3-regions/#the-flow-into-property"/>
         <link rel="help" href="http://www.w3.org/TR/css3-regions/#flow-from"/>
         <meta name="flags" content="dom">
         <meta name="assert" content="Value specified for the flow-into property should be parsed correctly.">
         <script src="/resources/testharness.js"></script>
-        <script src="/resources/testharnessreport.js"></script>        
+        <script src="/resources/testharnessreport.js"></script>
     </head>
-    
+
     <body>
         <div id="log"></div>
-        
+
         <script type="text/javascript">
             function testParse(declaration) {
                 var div = document.createElement("div");
                 div.setAttribute("style", declaration);
                 return div.style.flowInto;
             }
-            
+
             function testComputedStyle(value) {
                 var div = document.createElement("div");
                 document.body.appendChild(div);
@@ -43,8 +43,8 @@
                 document.body.removeChild(parentDiv);
                 return childFlowComputedValue;
             }
-            
-            test(function() {assert_equals(testParse("flow-into: none"), "none")}, "Test Parse none"); 
+
+            test(function() {assert_equals(testParse("flow-into: none"), "none")}, "Test Parse none");
             test(function() {assert_equals(testParse("flow-into: first-flow"), "first-flow")}, "Test Parse first-flow");
             test(function() {assert_equals(testParse("flow-into: \'first flow\'"), "")}, "Test Parse 'first-flow'");
             test(function() {assert_equals(testParse("flow-into: ;"), "")}, "Test Parse ;");

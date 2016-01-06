@@ -1,6 +1,6 @@
-// 
+//
 // Simple Helper Functions For Testing CSS
-// 
+//
 
 (function(root) {
 'use strict';
@@ -17,7 +17,7 @@ root.setStyle = function(selector, styles) {
         target.type = "text/css";
         document.getElementsByTagName('head')[0].appendChild(target);
     }
-    
+
     var data = [];
     // single selector/styles
     if (typeof selector === 'string' && styles !== undefined) {
@@ -44,7 +44,7 @@ function serializeStyles(styles) {
             data.push(prefixedProperty + ":" + styles[property] + ";");
         }
     }
-    
+
     return data.join('\n');
 }
 
@@ -60,22 +60,6 @@ root.computedStyle = function(element, property, pseudo) {
 // flush rendering buffer
 root.reflow = function() {
     document.body.offsetWidth;
-};
-
-// add all known TransitionEnd events to element
-root.addTransitionEvent = function(element, handler) {
-    return addEvent(element, 'TransitionEnd webkitTransitionEnd transitionend oTransitionEnd otransitionend MSTransitionEnd', handler);
-};
-
-// add space-separated list of events to element
-root.addEvent = function(element, events, handler) {
-    var _events = {};
-    var tokens = events.split(" ");
-    for (var i = 0, token; token = tokens[i]; i++) {
-        element.addEventListener(token, handler, false);
-        _events[token] = handler;
-    }
-    return _events;
 };
 
 // merge objects
@@ -109,14 +93,4 @@ root.domFixture = function(selector) {
         throw new Error('domFixture must be initialized first!');
     }
 };
-
-// return requestAnimationFrame handler, if available
-root.getRequestAnimationFrame = function() {
-    return window.requestAnimationFrame
-        || window.mozRequestAnimationFrame
-        || window.webkitRequestAnimationFrame
-        || window.msRequestAnimationFrame
-        || window.oRequestAnimationFrame;
-};
-
 })(window);

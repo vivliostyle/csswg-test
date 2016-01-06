@@ -7,14 +7,9 @@
 		<meta name="flags" content="ahem" />
 		<meta name="assert" content="This tests checks that there is underline to the right of the text in vertical writing mode." />
 		<style type="text/css"><![CDATA[
-		
+
 			div
 			{
-				-webkit-writing-mode: 		vertical-rl;
-				-moz-writing-mode: 			vertical-rl;
-				-o-writing-mode: 			vertical-rl;
-				-ms-writing-mode: 			tb-rl;
-				-ms-writing-mode:			vertical-rl;
 				writing-mode: 				vertical-rl;
 
 			}
@@ -38,11 +33,6 @@
 				color:blue;
 
 				text-decoration: underline;
-				-ms-text-underline-position: above;
-				-ms-text-underline-position: right; /* reserved IE */
-				-moz-text-underline-position: right; /* reserved Firefox */
-				-o-text-underline-position: right; /* reserved Opera */
-				-webkit-text-underline-position: right; /* reserved webkit */
 				text-underline-position: right;
 			}
 

@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
 		<title>CSS Regions: element has contentEditable attribute set and both it and a child of it are
 			flowed in a the same region</title>
 		<link rel="author" title="Mihai Balan" href="mailto:mibalan@adobe.com">
 		<link rel="help" href="http://www.w3.org/TR/css3-regions/#the-flow-into-property">
-		<link rel="help" href="http://www.w3.org/TR/css3-regions/#the-flow-from-property">
+		<link rel="help" href="http://www.w3.org/TR/css3-regions/#flow-from">
 		<link rel="help" href="http://www.w3.org/TR/html5/editing.html#contenteditable">
 		<meta name="flags" content="dom interact">
-		<meta name="assert" content="Test checks that flowing both and element and one of its 
+		<meta name="assert" content="Test checks that flowing both and element and one of its
 		children in a region, when said element has the contentEditable attribute set does not
 		affect their rendering in the regions and the ability to edit it.">
 		<link rel="match" href="reference/contentEditable-004-ref.html">
@@ -65,7 +66,7 @@
 			<!-- On a single line since new lines in contentEditable elements are messy :( -->
 			This is some text that should be editable. Even the text between <em><span class="inline-marker green"></span> <span id="marked-parent">these two markers</span> <span class="inline-marker blue"></span></em>.
 		</div>
-	
+
 		<div class="region">
 			<p>&nbsp;</p>
 		</div>

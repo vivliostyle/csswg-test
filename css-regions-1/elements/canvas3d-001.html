@@ -4,7 +4,7 @@
         <title>CSS Regions: rendering 3D canvas elements inside regions</title>
         <link rel="author" title="Mihai Balan" href="mailto:mibalan@adobe.com">
         <link rel="help" href="http://www.w3.org/TR/css3-regions/#the-flow-into-property">
-        <link rel="help" href="http://www.w3.org/TR/css3-regions/#the-flow-from-property">
+        <link rel="help" href="http://www.w3.org/TR/css3-regions/#flow-from">
         <link rel="help" href="http://www.w3.org/TR/css-transforms-1/#transform-functions">
         <meta name="assert" content="Test checks that when a 3D (webGL) canvas element is flowed in a region it renders as it would render if it wouldn't be flowed in the region.">
         <meta name="flags" content="dom">
@@ -32,7 +32,7 @@
     </head>
     <body>
         <p>Test passes if you see a cube (with blue, teal and purple sides) inside a black-bordered rectangle and no red.</p>
-        
+
         <div id="container" class="flow">
         	<!-- A WebGL <canvas> will be created here, via script (see static-cube.js) -->
         </div>
