@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>CSS Test Reference: breaks inside elements: widows - initial value</title>
+<link rel="author" title="Vivliostyle" href="http://vivliostyle.com">
+<link rel="stylesheet" type="text/css" href="support/vivliostyle-user-agent.css">
+<style type="text/css">
+    div#page, div#body {
+        line-height: 1;
+        font-size: 20px;
+    }
+    div#page, div#page * {
+        margin:0;
+        padding:0;
+    }
+    div#body {
+        height: 100%;
+    }
+    div#body div.spacer {
+        height:50%;
+    }
+    div#body div.backup {
+        margin-top: -4em;
+    }
+
+    .test {
+        color: blue;
+        width: 1em;
+    }
+</style>
+<body>
+<div id="page"><div id="body">
+    <div class="spacer">This test requires 2 pages. The blue text must
+        denote accurate page numbers. Lines A-C must appear on this page;
+        lines D-E must appear on the next page.</div>
+
+    <div class="spacer backup"></div>
+    <div class="test">
+        Page&nbsp;1&nbsp;Line&nbsp;A
+        Page&nbsp;1&nbsp;Line&nbsp;B
+        Page&nbsp;1&nbsp;Line&nbsp;C
+    </div>
+</div></div>
+</body>
