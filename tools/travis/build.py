@@ -1,3 +1,4 @@
+import itertools
 import os
 import shutil
 import subprocess
@@ -14,19 +15,49 @@ built_dir = os.path.join(here, "css-test-built")
 local_files = ["manifest", "serve", "serve.py", ".gitmodules", "tools", "resources",
                "config.default.json"]
 
+def get_hgsubstate():
+    state = {}
+    with open(os.path.join(source_dir, ".hgsubstate"), "r") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            revision, path = line.split(" ", 1)
+            state[path] = revision
+    return state
+
 def fetch_submodules():
     hg = vcs.hg
     orig_dir = os.getcwd()
+    state = get_hgsubstate()
     for tool in ["apiclient", "w3ctestlib"]:
         dest_dir = os.path.join(source_dir, "tools", tool)
+        repo_path = "tools/" + tool
         if os.path.exists(os.path.join(dest_dir, ".hg")):
             try:
                 os.chdir(dest_dir)
-                hg("pull", "-u")
+                if repo_path in state:
+                    rev = state[repo_path]
+                    try:
+                        hg("update", rev, log_error=False)
+                    except subprocess.CalledProcessError:
+                        hg("pull")
+                        hg("update", rev)
+                else:
+                    hg("pull")
+                    hg("update")
             finally:
                 os.chdir(orig_dir)
         else:
             hg("clone", ("https://hg.csswg.org/dev/%s" % tool), dest_dir)
+            try:
+                os.chdir(dest_dir)
+                if repo_path in state:
+                    hg("update", state[repo_path])
+                else:
+                    hg("update")
+            finally:
+                os.chdir(orig_dir)
 
 def update_dist():
     if not os.path.exists(built_dir) or not vcs.is_git_root(built_dir):
@@ -56,15 +87,8 @@ def setup_virtualenv():
     subprocess.check_call(["pip", "-q", "install", "mercurial"])
     subprocess.check_call(["pip", "-q", "install", "html5lib"])
     subprocess.check_call(["pip", "-q", "install", "lxml"])
+    subprocess.check_call(["pip", "-q", "install", "Template-Python"])
 
-
-def update_template():
-    svn = vcs.vcs("svn")
-    template_dir = os.path.join(here, "Template-Python")
-
-    svn("co", "svn://svn.tt2.org/Template-Python/trunk", template_dir)
-    subprocess.check_call(["python", "setup.py", "install"],
-                          cwd=template_dir)
 
 def update_to_changeset(changeset):
     git = vcs.bind_to_repo(vcs.git, source_dir)
@@ -74,39 +98,29 @@ def build_tests():
     subprocess.check_call(["python", os.path.join(source_dir, "tools", "build.py")],
                            cwd=source_dir)
 
-def list_current_files():
-    git = vcs.bind_to_repo(vcs.git, built_dir)
-    paths = [item for item in git("ls-tree", "-r", "--full-name", "--name-only", "HEAD").split("\n")
-             if item and item not in local_files]
-    return set(paths)
+def remove_current_files():
+    for node in os.listdir(built_dir):
+        if node.startswith(".git"):
+            continue
+        path = os.path.join(built_dir, node)
+        if os.path.isdir(path):
+            shutil.rmtree(path)
+        else:
+            os.remove(path)
 
 def copy_files():
     dist_path = os.path.join(source_dir, "dist")
-    dest_paths = []
-    for dir_name, dir_names, file_names in os.walk(dist_path):
-        for file_name in file_names:
-            src_path = os.path.join(dir_name, file_name)
-            rel_path = os.path.relpath(src_path, dist_path)
-            dest_path = os.path.join(built_dir, rel_path)
-            dest_dir = os.path.dirname(dest_path)
-            if not os.path.exists(dest_dir):
-                os.makedirs(dest_dir)
+    for node in os.listdir(dist_path):
+        src_path = os.path.join(dist_path, node)
+        dest_path = os.path.join(built_dir, node)
+        if os.path.isdir(src_path):
+            shutil.copytree(src_path, dest_path)
+        else:
             shutil.copy2(src_path, dest_path)
-            dest_paths.append(os.path.relpath(dest_path, built_dir))
 
-    return set(dest_paths)
-
-def update_git(old_files, new_files):
+def update_git():
     git = vcs.bind_to_repo(vcs.git, built_dir)
-
-    print old_files - new_files
-    for item in old_files - new_files:
-        git("rm", item)
-
-    for item in new_files - old_files:
-        git("add", item)
-
-    git("add", "-u")
+    git("add", ".")
 
 def add_changeset(changeset):
     git = vcs.bind_to_repo(vcs.git, built_dir)
@@ -130,7 +144,8 @@ def get_new_commits():
     with open(commit_path) as f:
         prev_commit = f.read().strip()
 
-    commit_range = "%s..%s" % (prev_commit, os.environ['TRAVIS_COMMIT'])
+    merge_base = git("merge-base", prev_commit, os.environ['TRAVIS_COMMIT']).strip()
+    commit_range = "%s..%s" % (merge_base, os.environ['TRAVIS_COMMIT'])
     commits = git("log", "--pretty=%H", "-r", commit_range).strip()
     if not commits:
         return []
@@ -162,18 +177,14 @@ def maybe_push():
 
 def main():
     setup_virtualenv()
-    try:
-        import template
-    except ImportError:
-        update_template()
     fetch_submodules()
     update_dist()
     for changeset in get_new_commits():
         update_to_changeset(changeset)
-        old_files = list_current_files()
+        remove_current_files()
         build_tests()
-        new_files = copy_files()
-        update_git(old_files, new_files)
+        copy_files()
+        update_git()
         add_changeset(changeset)
         commit(changeset)
     maybe_push()
