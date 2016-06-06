@@ -12,3 +12,4 @@ wpt_tools
 *~
 *.orig
 *Thumbs.db
+node_modules
